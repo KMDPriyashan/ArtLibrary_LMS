@@ -1,0 +1,74 @@
+.root {
+    -fx-background-color: #f4f6f9;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.main-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2b7bf6;
+}
+
+.sub-title {
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-fill: #444444;
+}
+
+.field-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 400px;
+}
+
+.input-field:focused {
+    -fx-border-color: #2b7bf6;
+    -fx-border-width: 1.5px;
+}
+
+.btn-reset {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 45px;
+}
+
+.btn-reset:hover {
+    -fx-background-color: #cc0000;
+}
+
+.btn-login {
+    -fx-background-color: #2b7bf6;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 45px;
+}
+
+.btn-login:hover {
+    -fx-background-color: #1a62d6;
+}
+
+.footer-text {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-text-fill: #333333;
+}
