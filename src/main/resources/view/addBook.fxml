@@ -135,5 +135,6 @@
          <font>
             <Font name="System Bold" size="10.0" />
          </font></Label>
+      <Button layoutX="212.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #8ECA3C;" text="Back to Home" textFill="WHITE" />
    </children>
 </AnchorPane>
