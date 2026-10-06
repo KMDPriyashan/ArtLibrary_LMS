@@ -69,4 +69,14 @@ public class dashboardController {
         }
         stage.show();
     }
+
+    public void btnHistoryOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/historyPage.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+    }
 }

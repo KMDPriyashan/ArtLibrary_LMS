@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,15 +10,14 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="543.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.returnBooksController">
    <children>
-      <Label layoutX="194.0" layoutY="20.0" text="Add Books">
+      <Label layoutX="194.0" layoutY="20.0" text="Return Book from Active member">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="194.0" layoutY="53.0" text="Register new Book in that catelog">
+      <Label layoutX="194.0" layoutY="53.0" text="Return new Book in that active members. ">
          <font>
             <Font size="11.0" />
          </font>
@@ -94,30 +94,49 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff1f" height="423.0" layoutX="194.0" layoutY="96.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="553.0" />
-      <TextField layoutX="254.0" layoutY="190.0" prefHeight="38.0" prefWidth="438.0" />
-      <Label layoutX="210.0" layoutY="107.0" text="Book Details Entry">
+      <TextField layoutX="254.0" layoutY="190.0" prefHeight="38.0" prefWidth="438.0" promptText="enter the issue transaction" />
+      <Label layoutX="210.0" layoutY="107.0" text="Return Books Processing">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="210.0" layoutY="134.0" text="fill in the field below to add the new Books to the library category">
+      <Label layoutX="210.0" layoutY="134.0" text="Select and active barrow to process return and calculate status. ">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <TextField layoutX="256.0" layoutY="410.0" prefHeight="38.0" prefWidth="438.0" />
-      <Button layoutX="642.0" layoutY="467.0" mnemonicParsing="false" style="-fx-background-color: #2373F4;" text="Add Books" textFill="WHITE" />
+      <Button layoutX="579.0" layoutY="467.0" mnemonicParsing="false" style="-fx-background-color: #2373F4;" text="Conform Book Return" textFill="WHITE" />
       <Label layoutX="266.0" layoutY="168.0" text="Book ID">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Label>
-      <Label layoutX="265.0" layoutY="389.0" text="Publish Year">
+      <Label layoutX="268.0" layoutY="389.0" text="Return Date">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Label>
       <Button layoutX="227.0" layoutY="468.0" mnemonicParsing="false" style="-fx-background-color: #8ECA3C;" text="Back to Home" textFill="WHITE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="133.0" layoutX="255.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.2" width="438.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="134.0" layoutX="256.0" layoutY="244.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.2" width="438.0" />
+      <Label layoutX="271.0" layoutY="255.0" text="Member" textFill="WHITE" />
+      <DatePicker layoutX="259.0" layoutY="412.0" prefHeight="38.0" prefWidth="432.0" promptText="Enter the return Date" />
+      <Label layoutX="271.0" layoutY="295.0" text="Barrow Date" textFill="WHITE" />
+      <Label layoutX="271.0" layoutY="275.0" text="Barrow Book" textFill="WHITE" />
+      <Label layoutX="271.0" layoutY="319.0" text="Due Date" textFill="WHITE" />
+      <Label layoutX="271.0" layoutY="351.0" text="Overdue status" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="592.0" layoutY="255.0" text="Nimali Fanando" textFill="WHITE" />
+      <Label layoutX="588.0" layoutY="276.0" text="History Available" textFill="WHITE" />
+      <Label layoutX="616.0" layoutY="298.0" text="2026/10/06" textFill="WHITE" />
+      <Label layoutX="616.0" layoutY="319.0" text="2026/10/18" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#15ff28" height="28.0" layoutX="573.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="105.0" />
+      <Label layoutX="585.0" layoutY="345.0" text="Pending Status" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
