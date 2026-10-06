@@ -15,6 +15,8 @@ public class dashboardController {
     public Button btnAddBook;
     public Button btnAddmembers;
     public Button btnManageMember;
+    public Button btnIssueBooks;
+    public Button btnreturnBooks;
 
 
     public void btnAddBookOnAction(ActionEvent actionEvent) {
@@ -42,6 +44,26 @@ public class dashboardController {
         Stage stage = new Stage();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/manageMember.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+    }
+
+    public void btnIssueBooksOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/issueBook.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+    }
+
+    public void btnreturnBooksOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/returnBooks.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
