@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="465.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.historyPageController">
+   <children>
+      <Label layoutX="195.0" layoutY="19.0" text="Master Review of the Barrowing Books">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="52.0" text="review of barrowing a Book in that catelog">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Circle fill="#1fff40" layoutX="708.0" layoutY="46.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.2" />
+      <Label layoutX="719.0" layoutY="39.0" text="User Online">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="468.0" layoutX="-16.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.2" width="187.0" />
+      <Label layoutX="56.0" layoutY="21.0" text="ArtLibrary" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="52.0" text="iCET student Mnagement system" textFill="WHITE">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="78.0" text="MAIN NAVIGATION" textFill="#efefef">
+         <font>
+            <Font name="Myanmar Text Bold" size="9.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#feffff" height="18.0" layoutX="29.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+      <Line endX="34.79998779296875" endY="-1.52587890625E-5" layoutX="126.0" layoutY="109.0" startX="-100.0" stroke="#efefef" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="10.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="136.0" />
+      <Label alignment="CENTER" layoutX="27.0" layoutY="189.0" text="Add Member" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="28.0" layoutY="220.0" text="Manage Member" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="28.0" layoutY="252.0" text="Issue Book" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="27.0" layoutY="280.0" text="Return Book" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="29.0" layoutY="131.0" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="26.0" layoutY="315.0" text="Borrowing History">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="414.0" text="Develper sourses" textFill="WHITE">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="28.0" layoutY="430.0" text="KMDeveloper" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#feffff" height="18.0" layoutX="120.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+      <Label layoutX="29.0" layoutY="158.0" text="Add Books" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="349.0" layoutX="195.0" layoutY="89.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.2" width="577.0" />
+      <TableView layoutX="216.0" layoutY="133.0" prefHeight="280.0" prefWidth="535.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="216.0" layoutY="102.0" text="Master Barrowing Logs">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
