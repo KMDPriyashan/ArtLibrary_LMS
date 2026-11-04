@@ -1,5 +1,6 @@
 package Controller.Books;
 
+import Model.Book;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -56,9 +57,21 @@ public class addBookPageController {
     }
 
     public void btnPageAddBookOnAction(ActionEvent actionEvent) {
-        addBookController.databaseSaveBookDetails(txtBookID.getText(), txtBookTitle.getText(), txtAuthorName.getText(), txtBookYear.getText(), txtbookCategory.getText(),txtBookQty.getText());
-    }
 
+        int year = Integer.parseInt(txtBookYear.getText().trim());
+        int qty = Integer.parseInt(txtBookQty.getText().trim());
+
+        Book book = new Book(
+                txtBookID.getText().trim(),
+                txtBookTitle.getText().trim(),
+                txtAuthorName.getText().trim(),
+                txtBookYear.getText().trim(),
+                year,
+                qty
+        );
+
+        addBookController.databaseSaveBookDetails(book);
+    }
     public void btndashboardOnAction(ActionEvent actionEvent) {
         SceneManager.switchPage("/view/dashboard.fxml");
     }

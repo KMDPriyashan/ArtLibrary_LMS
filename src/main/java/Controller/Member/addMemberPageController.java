@@ -1,5 +1,6 @@
 package Controller.Member;
 
+import Model.Member;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import scene.SceneManager;
@@ -45,7 +46,16 @@ public class addMemberPageController {
     }
 
     public void btnSubmitAddMemberOnAction(ActionEvent actionEvent) {
-        addMemberController.databaseSaveMemberDetails(txtMemberID.getText(),txtMemberName.getText(),txtMemberEmail.getText(),txtMemberAddress.getText(),txtMemberPhonenumber.getText());
+
+        Member member = new Member(
+                txtMemberID.getText().trim(),
+                txtMemberName.getText().trim(),
+                txtMemberEmail.getText().trim(),
+                txtMemberAddress.getText().trim(),
+                txtMemberPhonenumber.getText().trim()
+        );
+
+        addMemberController.databaseSaveMemberDetails(member);
     }
 
     public void btnBackToHomeOnAction(ActionEvent actionEvent) {

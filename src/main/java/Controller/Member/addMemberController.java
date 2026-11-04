@@ -1,5 +1,6 @@
 package Controller.Member;
 
+import Model.Member;
 import db.DBConnection;
 import scene.SceneManager;
 
@@ -10,16 +11,16 @@ import java.sql.SQLException;
 public class addMemberController {
     Connection connection = DBConnection.getInstance().getConnection();
 
-    public void databaseSaveMemberDetails (String MemberID, String MemberName, String MemberEmail, String MemberAddress, String MemberPhoneNumber){
+    public void databaseSaveMemberDetails (Member member){
 
         String addMemberSql = "INSERT INTO members (member_id, full_name, email, phone_number, address) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(addMemberSql);
-            preparedStatement.setString(1,MemberID);
-            preparedStatement.setString(2,MemberName);
-            preparedStatement.setString(3,MemberEmail);
-            preparedStatement.setString(4,MemberPhoneNumber);
-            preparedStatement.setString(5,MemberAddress);
+            preparedStatement.setString(1,member.getMemberId());
+            preparedStatement.setString(2,member.getFullName());
+            preparedStatement.setString(3,member.getEmail());
+            preparedStatement.setString(4,member.getPhoneNumber());
+            preparedStatement.setString(5,member.getAddress());
 
             int addMemberQuaryResult = preparedStatement.executeUpdate();
             if (addMemberQuaryResult > 0){

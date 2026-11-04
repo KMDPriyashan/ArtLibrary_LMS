@@ -1,5 +1,6 @@
 package Controller.Books;
 
+import Model.Book;
 import db.DBConnection;
 import scene.SceneManager;
 
@@ -11,18 +12,18 @@ public class addBookController {
 
     Connection connection = DBConnection.getInstance().getConnection();
 
-    public void databaseSaveBookDetails(String BookID, String BookTitle, String AuthorName, String BookYear, String BookCategory, String BookQty) {
+    public void databaseSaveBookDetails(Book book) {
 
         String AddBookSql = "INSERT INTO books (book_id, title, author, category, published_year, quantity) VALUES (?,?,?,?,?,?)";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(AddBookSql);
-            preparedStatement.setString(1,BookID);
-            preparedStatement.setString(2,BookTitle);
-            preparedStatement.setString(3,AuthorName);
-            preparedStatement.setString(4,BookCategory);
-            preparedStatement.setString(5,BookYear);
-            preparedStatement.setString(6,BookQty);
+            preparedStatement.setString(1,book.getBook_id());
+            preparedStatement.setString(2,book.getTitle());
+            preparedStatement.setString(3,book.getAuthor());
+            preparedStatement.setString(4, book.getCategory());
+            preparedStatement.setInt(5,book.getPublished_year());
+            preparedStatement.setInt(6,book.getQuantity());
 
             int addBookQuaryResult = preparedStatement.executeUpdate();
             if (addBookQuaryResult > 0){

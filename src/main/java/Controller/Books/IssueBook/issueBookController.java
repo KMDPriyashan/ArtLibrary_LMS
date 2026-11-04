@@ -1,5 +1,6 @@
 package Controller.Books.IssueBook;
 
+import Model.issueBook;
 import db.DBConnection;
 import scene.SceneManager;
 
@@ -11,17 +12,17 @@ public class issueBookController {
 
     Connection connection = DBConnection.getInstance().getConnection();
 
-    public void databaseSaveIssueBookDetails (String issueID, String BarrowBook, String BarrowingMember, String issueDate, String dueDate){
+    public void databaseSaveIssueBookDetails (issueBook issuebook){
 
         String addIssueBookSql = "INSERT INTO issueBook (issueID, borrowMember, borrowBook, issuedate, duedate) VALUES (?,?,?,?,?)";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(addIssueBookSql);
-            preparedStatement.setString(1,issueID);
-            preparedStatement.setString(2,BarrowingMember);
-            preparedStatement.setString(3,BarrowBook);
-            preparedStatement.setString(4,issueDate);
-            preparedStatement.setString(5,dueDate);
+            preparedStatement.setString(1,issuebook.getIssueID());
+            preparedStatement.setString(2,issuebook.getBorrowMember());
+            preparedStatement.setString(3,issuebook.getBorrowBook());
+            preparedStatement.setString(4,issuebook.getIssueDate());
+            preparedStatement.setString(5,issuebook.getDueDate());
 
             int addIssueBookQuaryResult = preparedStatement.executeUpdate();
 
