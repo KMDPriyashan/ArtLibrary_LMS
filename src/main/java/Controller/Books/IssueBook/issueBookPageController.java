@@ -1,5 +1,6 @@
 package Controller.Books.IssueBook;
 
+import Model.issueBook;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -47,12 +48,17 @@ public class issueBookPageController {
     }
 
     public void btnSubmitIssueBookOnAction(ActionEvent actionEvent) {
-        issueBookController.databaseSaveIssueBookDetails(
-                txtBarrowingID.getText(),
-                txtBarrowingBook.getText(),
-                txtBarrowingMember.getText(),
-                dateDueDate.getValue().toString(),
-                dateIssueBook.getValue().toString());
+
+        issueBook issueBook = new issueBook(
+                txtBarrowingID.getText().trim(),
+                txtBarrowingBook.getText().trim(),
+                txtBarrowingMember.getText().trim(),
+                dateDueDate.getValue().toString().trim(),
+                dateIssueBook.getValue().toString().trim()
+        );
+
+
+        issueBookController.databaseSaveIssueBookDetails(issueBook);
     }
 
     public void btnBackToHomeOnAction(ActionEvent actionEvent) {
