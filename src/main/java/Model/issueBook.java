@@ -8,8 +8,7 @@ public class issueBook {
     private String issueDate;
     private String dueDate;
 
-    public issueBook(String issueID, String borrowMember, String borrowBook,
-                     String issueDate, String dueDate) {
+    public issueBook(String issueID, String borrowMember, String borrowBook, String issueDate, String dueDate) {
         this.issueID = issueID;
         this.borrowMember = borrowMember;
         this.borrowBook = borrowBook;
