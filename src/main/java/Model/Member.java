@@ -8,8 +8,7 @@ public class Member {
     private String phoneNumber;
     private String address;
 
-    public Member(String memberId, String fullName, String email,
-                  String phoneNumber, String address) {
+    public Member(String memberId, String fullName, String email, String phoneNumber, String address) {
         this.memberId = memberId;
         this.fullName = fullName;
         this.email = email;
@@ -47,6 +46,16 @@ public class Member {
     public String getPhoneNumber() { return phoneNumber; }
     public String getAddress() { return address; }
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "memberId='" + memberId + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }
 
 
