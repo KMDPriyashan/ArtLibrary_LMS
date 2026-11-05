@@ -47,7 +47,12 @@ public class issueBookPageController {
     }
 
     public void btnSubmitIssueBookOnAction(ActionEvent actionEvent) {
-        issueBookController.databaseSaveIssueBookDetails(txtBarrowingID.getText(),txtBarrowingBook.getText(),txtBarrowingMember.getText(),dateDueDate.getValue().toString(),dateIssueBook.getValue().toString());
+        issueBookController.databaseSaveIssueBookDetails(
+                txtBarrowingID.getText(),
+                txtBarrowingBook.getText(),
+                txtBarrowingMember.getText(),
+                dateDueDate.getValue().toString(),
+                dateIssueBook.getValue().toString());
     }
 
     public void btnBackToHomeOnAction(ActionEvent actionEvent) {
